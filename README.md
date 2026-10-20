@@ -3,9 +3,10 @@ Proyecto para estimar la gravedad del uso problemático de internet en niños y 
 **Universidad Icesi — Especialización en Inteligencia Artificial Aplicada**  
 **Asignatura:** Proyecto I de Innovación IA · 
 **Autora:** Viviana Fernandez Payan
+[github.com/vivianaf926](https://github.com/vivianaf926)
 **Estado:** Entregas en construcción  
 
-## Presentación
+### Introducción
 
 El uso problemático de Internet (PIU) en niños y adolescentes se ha convertido en una preocupación creciente para padres, educadores y profesionales de la salud. Esto se refiere al uso excesivo o descontrolado de tecnologías digitales que interfiere significativamente con la vida diaria, incluyendo el rendimiento académico, la actividad física,  las relaciones sociales y la salud.
 
