@@ -35,4 +35,41 @@ De acuerdo a la problematica expuesta, se definen a continuación los objetivos 
 
 <img width="399" height="231" alt="image" src="https://github.com/user-attachments/assets/44881d0e-d3c6-472a-8771-b5769ef8152e" />
 
+Figura. 1. Árbol de problemas, Uso Problemático de Internet en niños.
+
+## PROBLEMA CENTRAL
+
+Uso problemático de Internet (PIU) en niños y adolescentes, caracterizado por un uso compulsivo y descontrolado de tecnologías digitales que interfiere en su bienestar psicológico, rendimiento académico, relaciones interpersonales y desarrollo cognitivo a largo plazo.
+
+## CAUSAS PRINCIPALES
+o	Comorbilidades psiquiátricas/ psicológicas preexistentes, déficit en el autocontrol y autoimagen deficiente, se refiere a trastornos de salud mental preexistentes (ansiedad, depresión, TDAH, trastornos del espectro impulsivo-compulsivo).
+o	Distanciamiento social, déficit de monitoreo del entorno familiar y presión de grupo, se refiere a Supervisión parental insuficiente y ausencia de educación digital en el hogar, presión social, comparación en redes sociales y ciberacoso.
+o	Acceso continuo a dispositivos, aplicaciones inmersivas y contenidos altamente estimulantes, se refiere a diseño de aplicaciones con técnicas de persuasión (recompensas intermitentes, notificaciones), exposición a contenido inapropiado o adictivo (juegos de azar, pornografía).
+o	Políticas escolares, poca formación en uso de tecnologías, refiere a la desigualdad en el acceso a recursos de salud mental y educativa, normas culturales que promueven el uso intensivo de tecnología.
+
+## CONSECUENCIAS PRINCIPALES
+
+o	Deterioro de las relaciones familiares, escolares y aislamiento interpersonal
+o	Riesgo de autolesión, retraso en el desarrollo cognitivo y deterioro de la salud física, problemas físicos (obesidad, trastornos del sueño, musculoesqueléticos.
+o	Deficiente desempeño académico, postergación de deberes y probabilidad elevada de abandono escolar
+o	Cuadros de ansiedad, trastornos del estado de ánimo y conductas adictivas digitales
+
+## OBJETIVO PRINCIPAL
+
+Desarrollar un modelo predictivo que permita identificar señales tempranas del uso problemático de Internet en niños y adolescentes, integrando datos demográficos, clínicos y comportamentales recolectados por el Child Mind Institute.
+
+## OBJETIVOS ESPECÍFICOS
+
+1.	Realizar un análisis exploratorio de datos (EDA) para identificar patrones y correlaciones de las variables disponibles en el conjunto de datos.
+2.	Preprocesar los datos mediante limpieza, imputación de valores faltantes, normalización, codificación de variables categóricas y selección de características basada en importancia de variables, asegurando robustez e interpretabilidad del conjunto de datos.
+3.	Implementar y comparar modelos de aprendizaje automático, evaluando el rendimiento, interpretabilidad y generalización, usando métricas como ROC-AUC, F1-score, precisión, recall, MAE y RMSE, “the quadratic weighted kappa”, entre otras.
+4.	Seleccionar un modelo interpretable y escalable, con el mejor rendimiento en la métrica “the quadratic weighted kappa”, que permita identificar señales tempranas del uso problemático de Internet en niños.
+
+
+## ESTADO DEL ARTE: Revisión bibliográfica y análisis de soluciones existentes
+
+MODELOS USADOS PARA LA RESOLUCIÓN DEL PROBLEMA
+Se realiza una revisión de la literatura y el estado del arte de los modelos predictivos que permiten identificar señales tempranas del uso problemático de Internet. A continuación, se presenta un resumen de los modelos utilizados en los artículos consultados:
+
+<img width="455" height="300" alt="image" src="https://github.com/user-attachments/assets/14ee8b59-786c-40f2-a32e-ddccce452dfa" />
 
