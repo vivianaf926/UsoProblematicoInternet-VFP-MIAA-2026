@@ -74,7 +74,7 @@ Estos objetivos expresan resultados verificables. El análisis exploratorio y el
 
 Gómez Salgado y colaboradores diseñaron y evaluaron un instrumento breve para detectar uso problemático de internet en adolescentes; reportaron **sensibilidad de 0,80 y especificidad de 0,81** en su estudio [5]. Por su parte, Kuss y Lopez-Fernandez revisaron estudios clínicos que muestran diversidad en la conceptualización y valoración del fenómeno [11]. Estos antecedentes justifican aclarar qué variable mide el proyecto antes de atribuir al algoritmo utilidad clínica.
 
-Los trabajos de Ko y colaboradores [1], Yen y colaboradores [3] y van Rooij y colaboradores [12] examinaron asociaciones con síntomas psiquiátricos y patrones de utilización de aplicaciones. Ninguno de esos estudios evalúa directamente el mismo problema ordinal `sii` del conjunto HBN.
+Los trabajos de Ko y colaboradores [1], Yen y colaboradores [3] y van Rooij y colaboradores [12] examinaron asociaciones con síntomas psiquiátricos y patrones de utilización de aplicaciones. Fisoun y colaboradores [7] describieron asociaciones con experiencia de consumo de sustancias en un estudio transversal; sus resultados no establecen causalidad. Ninguno de esos estudios evalúa directamente el mismo problema ordinal `sii` del conjunto HBN.
 
 ### 4.2. Comparación de soluciones existentes
 
@@ -85,6 +85,8 @@ Los trabajos de Ko y colaboradores [1], Yen y colaboradores [3] y van Rooij y co
 | Ioannidis y colaboradores (2016) [8] | Emplea aprendizaje automático para estudiar asociaciones entre uso problemático e impulsividad/compulsividad. | Participantes adultos y desenlace diferente; no es una validación de clasificación ordinal pediátrica. |
 | Haupts (primer lugar Kaggle, 2025) [15] | Ensamble con LightGBM, XGBoost, CatBoost y ExtraTrees; regresión sobre puntuación total PCIAT y conversión posterior a `sii`. | Solución de competencia; el puesto no demuestra generalización clínica y el resultado depende del protocolo usado. |
 | Agarwal (segundo lugar Kaggle, 2024) [16] | Estrategias diferenciadas de imputación y ampliación de particiones de validación cruzada sobre una base CatBoost. | El autor describe discrepancia entre resultados públicos y privados; es un reporte técnico de competencia. |
+
+La revisión de Kato y colaboradores [4] aporta un marco general sobre modelos computacionales de adicciones conductuales, mientras que Probierz y colaboradores [9] exploran algoritmos predictivos en datos de ciencias sociales. Feng y colaboradores [13] emplearon conectividad cerebral, una modalidad no equivalente a los indicadores tabulares de este proyecto. Esos aportes deben considerarse antecedentes conceptuales o metodológicos, no resultados comparables sobre HBN.
 
 **Brecha abordada:** los antecedentes incluyen soluciones de diferentes muestras y enfoques, pero el proyecto necesita una comparación propia y reproducible del aporte de grupos de variables, preprocesamiento y algoritmos, manteniendo constantes el esquema de validación y las métricas. Se analizará especialmente el efecto de las categorías minoritarias y la posibilidad de fuga de información. No se anticipan mejoras antes de ejecutar los experimentos.
 
