@@ -54,17 +54,18 @@ o	Riesgo de autolesión, retraso en el desarrollo cognitivo y deterioro de la sa
 o	Deficiente desempeño académico, postergación de deberes y probabilidad elevada de abandono escolar
 o	Cuadros de ansiedad, trastornos del estado de ánimo y conductas adictivas digitales
 
-## OBJETIVO PRINCIPAL
+## OBJETIVO GENERAL
 
-Desarrollar un modelo predictivo que permita identificar señales tempranas del uso problemático de Internet en niños y adolescentes, integrando datos demográficos, clínicos y comportamentales recolectados por el Child Mind Institute.
+Desarrollar y evaluar, antes de finalizar el periodo académico 2026-2, al menos dos modelos de aprendizaje supervisado para estimar los cuatro niveles de severidad del uso problemático de internet (`sii`: 0, 1, 2 y 3) a partir de variables disponibles en el conjunto de datos Child Mind Institute/Healthy Brain Network, con validación cruzada estratificada de cinco particiones y el coeficiente kappa cuadrático ponderado (QWK) como métrica principal. Se establece como **meta exploratoria de desempeño** alcanzar un QWK medio de al menos 0,35 y superar una línea base definida previamente, sin atribuir al modelo capacidad diagnóstica o de predicción prospectiva.
+
+> **Alcance de la meta:** El umbral QWK ≥ 0,35 es un objetivo de trabajo propuesto, no un resultado obtenido. Su pertinencia deberá revisarse frente a la distribución de clases, el modelo de referencia y la viabilidad del conjunto de datos.
 
 ## OBJETIVOS ESPECÍFICOS
 
-1.	Realizar un análisis exploratorio de datos (EDA) para identificar patrones y correlaciones de las variables disponibles en el conjunto de datos.
-2.	Preprocesar los datos mediante limpieza, imputación de valores faltantes, normalización, codificación de variables categóricas y selección de características basada en importancia de variables, asegurando robustez e interpretabilidad del conjunto de datos.
-3.	Implementar y comparar modelos de aprendizaje automático, evaluando el rendimiento, interpretabilidad y generalización, usando métricas como ROC-AUC, F1-score, precisión, recall, MAE y RMSE, “the quadratic weighted kappa”, entre otras.
-4.	Seleccionar un modelo interpretable y escalable, con el mejor rendimiento en la métrica “the quadratic weighted kappa”, que permita identificar señales tempranas del uso problemático de Internet en niños.
-
+1. **Caracterizar la calidad y viabilidad de los datos:** elaborar, antes del entrenamiento, un informe exploratorio que describa la población analizada, la distribución de las cuatro categorías `sii`, la proporción de valores faltantes y la plausibilidad de las variables candidatas, con criterios explícitos de inclusión y exclusión.
+2. **Definir conjuntos de variables reproducibles:** documentar al menos dos configuraciones de predictores con sus criterios de selección, limpieza, imputación y codificación, evitando usar como entradas la etiqueta `sii`, el puntaje total PCIAT o variables que permitan reconstruir directamente dicha etiqueta. Las transformaciones aprendidas de los datos deberán ajustarse únicamente con las particiones de entrenamiento.
+3. **Comparar algoritmos bajo una evaluación común:** entrenar al menos dos modelos supervisados mediante validación cruzada estratificada de cinco particiones y reportar, para cada modelo, QWK, F1-macro, matriz de confusión y sensibilidad por nivel de severidad, prestando especial atención a las categorías con menor representación.
+4. **Seleccionar e interpretar la solución final:** antes de concluir el periodo académico 2026-2, contrastar el desempeño de los modelos con la línea base, justificar la selección según QWK y métricas complementarias, y presentar un informe reproducible de errores, limitaciones y condiciones necesarias para una validación externa posterior.
 
 ## ESTADO DEL ARTE: Revisión bibliográfica y análisis de soluciones existentes
 
