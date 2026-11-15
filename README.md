@@ -3,15 +3,15 @@
 **Universidad Icesi · Maestría en Inteligencia Artificial Aplicada**  
 **Asignatura:** Proyecto I de Innovación IA  
 **Autora:** [Viviana Fernández Payán](https://github.com/vivianaf926)  
-**Estado:** primera entrega reorganizada y referencias depuradas; modelos y resultados propios pendientes de documentación.
+**Estado:** formulación y revisión de antecedentes. El análisis de datos y la evaluación de modelos son las siguientes etapas.
 
 ## Resumen del proyecto
 
-Este proyecto estudia la posibilidad de **estimar los cuatro niveles ordinales de severidad del uso problemático de internet (`sii`)** en niños y adolescentes mediante algoritmos de aprendizaje automático, utilizando variables demográficas, físicas y de comportamiento del estudio **Healthy Brain Network (HBN)**, difundidas a través de la competencia del Child Mind Institute en Kaggle.
+En este proyecto exploro cómo **estimar los cuatro niveles ordinales de severidad del uso problemático de internet (`sii`)** en niños y adolescentes mediante algoritmos de aprendizaje automático, utilizando variables demográficas, físicas y de comportamiento del estudio **Healthy Brain Network (HBN)**, difundidas a través de la competencia del Child Mind Institute en Kaggle.
 
 La pregunta de investigación es: **¿en qué medida los modelos supervisados permiten estimar la severidad de `sii` a partir de indicadores disponibles y cuáles son las limitaciones metodológicas de esa estimación?**
 
-El propósito es **académico y exploratorio**. Estimar una etiqueta de severidad a partir de mediciones disponibles no equivale a diagnosticar, demostrar causalidad ni predecir que un niño desarrollará el problema en el futuro.
+El propósito es **académico y exploratorio**. El análisis estima niveles de severidad a partir de las mediciones disponibles en el HBN.
 
 ## Documentación del proyecto
 
@@ -19,7 +19,7 @@ El propósito es **académico y exploratorio**. Estimar una etiqueta de severida
 |---|---|
 | [**Entrega 1: formulación del problema**](entrega_1/README.md) | Contexto, árbol de problemas, pregunta, objetivos SMART, comparación de antecedentes, metodología prevista y planificación. |
 | [**Referencias bibliográficas**](docs/referencias.md) | Fuentes científicas y técnicas con autores, datos editoriales y vínculos directos verificables. |
-| [**Bitácora de revisión bibliográfica**](docs/bitacora_bibliografica.md) | Registro de errores corregidos, sustituciones de referencias y criterios de verificación. |
+| [**Anexo. Bitácora de revisión bibliográfica**](docs/bitacora_bibliografica.md) | Criterios de verificación y cambios entre versiones de la bibliografía. |
 | **Etapas posteriores** | Análisis exploratorio, modelos y resultados: por incorporar cuando existan experimentos documentados. |
 
 ## Datos y fuente
@@ -32,19 +32,17 @@ Los datos presentan valores faltantes y diferencias de cobertura entre instrumen
 
 ## Objetivo y enfoque metodológico
 
-Se propone desarrollar y comparar, **durante el periodo académico 2026-2**, al menos **dos modelos supervisados** de estimación ordinal, bajo un procedimiento reproducible de preparación y validación.
+Mi objetivo es desarrollar y comparar, **durante el periodo académico 2026-2**, al menos **dos modelos supervisados** de estimación ordinal, bajo un procedimiento reproducible de preparación y validación.
 
-La evaluación utilizará el **coeficiente kappa cuadrático ponderado (QWK)** como métrica principal, acompañado de **F1-macro**, matrices de confusión y análisis por categoría. La meta QWK ≥ 0,35 incluida en la formulación es **exploratoria y todavía no constituye un resultado observado ni una referencia clínica**.
+La evaluación utilizará el **coeficiente kappa cuadrático ponderado (QWK)** como métrica principal, acompañado de **F1-macro**, matrices de confusión y análisis por categoría. Planteo un QWK ≥ 0,35 como **meta académica exploratoria**.
 
-Las etapas previstas, siguiendo una adaptación de **CRISP-DM**, comprenden: comprensión del problema, auditoría y preparación de los datos, entrenamiento, validación y discusión. Se controlará la fuga de información, en especial el uso incorrecto de `PCIAT-PCIAT_Total` como predictor directo de `sii`.
+Siguiendo una adaptación de **CRISP-DM**, primero delimito el problema. Luego auditaré y prepararé los datos, entrenaré los modelos y discutiré los resultados de la validación. Para controlar la fuga de información, excluiré `PCIAT-PCIAT_Total` del conjunto de predictores de `sii`.
 
 La explicación detallada de la metodología y sus criterios está en la [primera entrega](entrega_1/README.md).
 
 ## Estado de avances y reproducibilidad
 
-Actualmente se dispone de una formulación académica revisada, un estado del arte comparativo y una bibliografía trazable. **No se declara haber ejecutado modelos, alcanzado métricas ni validado resultados propios** en este repositorio.
-
-Los notebooks, dependencias de ejecución y resultados experimentales deberán publicarse junto con sus procedimientos de reproducción cuando sean desarrollados. Esto permite diferenciar objetivos, antecedentes externos y evidencia efectivamente generada por la autora.
+La primera entrega reúne el planteamiento del problema, los objetivos, el estado del arte y la bibliografía. La ejecución de modelos y los resultados experimentales están pendientes. Cuando complete los experimentos, publicaré los cuadernos, las dependencias y las instrucciones para reproducirlos.
 
 ## Limitaciones y uso responsable
 

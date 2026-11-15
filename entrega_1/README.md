@@ -3,9 +3,9 @@
 **Universidad Icesi · Maestría en Inteligencia Artificial Aplicada · 2026-2**  
 **Proyecto:** Estimación de la severidad del uso problemático de internet en niños y adolescentes.  
 **Autora:** Viviana Fernández Payán · [GitHub: vivianaf926](https://github.com/vivianaf926)  
-**Estado:** formulación revisada; los experimentos y resultados cuantitativos propios deben documentarse cuando se ejecuten.
+**Estado:** formulación y revisión de antecedentes. La evaluación experimental corresponde a la siguiente etapa.
 
-> Esta entrega presenta el problema, las relaciones conceptuales, la pregunta de investigación, los objetivos, el estado del arte y el plan de trabajo. La bibliografía completa y su verificación están en [docs/referencias.md](../docs/referencias.md).
+> En esta primera entrega delimito el problema, formulo la pregunta de investigación y los objetivos, reviso los antecedentes y presento el plan de trabajo.
 
 ## 1. Presentación y contexto
 
@@ -13,13 +13,13 @@ Internet forma parte de las actividades de aprendizaje, comunicación y entreten
 
 Se han descrito asociaciones entre uso problemático de internet y síntomas de ansiedad, depresión, déficit de atención y otras manifestaciones del bienestar psicológico [1], [3], [14]. Estas relaciones no deben interpretarse automáticamente como causales: distintos factores pueden compartir antecedentes o influirse mutuamente. Otros estudios han investigado los patrones de uso de aplicaciones, los factores psicosociales y los instrumentos para su detección [2], [5], [12].
 
-El **Child Mind Institute**, mediante la competición *Child Mind Institute — Problematic Internet Use* en Kaggle, propuso explorar si medidas físicas, información demográfica y datos de actividad ayudan a estimar cuatro niveles ordinales de severidad del uso problemático de internet en participantes del estudio **Healthy Brain Network (HBN)** [10], [17]. La propuesta de este proyecto es académica: examina la viabilidad y las limitaciones de la estimación mediante aprendizaje automático, no sustituye una evaluación clínica.
+El **Child Mind Institute**, mediante la competición *Child Mind Institute — Problematic Internet Use* en Kaggle, propuso explorar si medidas físicas, información demográfica y datos de actividad ayudan a estimar cuatro niveles ordinales de severidad del uso problemático de internet en participantes del estudio **Healthy Brain Network (HBN)** [10], [17]. A partir de este reto, me propongo examinar la viabilidad y las limitaciones de estimar la severidad con aprendizaje automático en los datos del HBN.
 
 ## 2. Delimitación y formulación del problema
 
 Para evaluar el uso problemático de internet en niños y adolescentes se requiere considerar cómo se mide el fenómeno y quién puede acceder a la valoración. Los instrumentos y los puntos de corte varían entre estudios [5], [11]. Algunos métodos requieren valoración profesional y pueden resultar difíciles de aplicar en familias con barreras culturales o lingüísticas [10], [17]. Estas dificultades motivan explorar indicadores complementarios de severidad.
 
-Desde el punto de vista de ciencia de datos, el reto se concreta en **determinar cuánto pueden aportar indicadores no derivados directamente del cuestionario PCIAT para estimar la categoría ordinal de severidad `sii`**, teniendo en cuenta valores faltantes, cobertura desigual de instrumentos, posibles desequilibrios entre clases y riesgo de fuga de información [10].
+Examinaré cuánto aportan **los indicadores que no se deriven del cuestionario PCIAT para estimar la categoría ordinal de severidad `sii`**. Tendré en cuenta los valores faltantes, la cobertura de los instrumentos, el desbalance entre clases y el riesgo de fuga de información [10].
 
 ### 2.1. Árbol de problemas y sustento
 
@@ -49,7 +49,7 @@ Las diferencias en instrumentos y puntos de corte dificultan comparar resultados
 
 > **¿En qué medida los modelos de aprendizaje automático pueden estimar los cuatro niveles de severidad del uso problemático de internet (`sii`) a partir de características demográficas, físicas y de comportamiento disponibles en HBN, y cuáles son las principales limitaciones de esa estimación?**
 
-La investigación plantea una **estimación concurrente y retrospectiva**. No se dispone aquí de evidencia de que los predictores se hayan medido necesariamente antes del desenlace; por tanto, no se afirmará detección anticipada de casos futuros.
+Planteo una **estimación concurrente y retrospectiva** con las mediciones disponibles en el HBN, cuya secuencia temporal respecto a `sii` requiere verificación.
 
 ## 3. Objetivos del proyecto (criterios SMART)
 
@@ -57,7 +57,7 @@ La investigación plantea una **estimación concurrente y retrospectiva**. No se
 
 Desarrollar y evaluar **antes de finalizar el periodo académico 2026-2** al menos **dos modelos supervisados** para estimar los **cuatro niveles de `sii`** a partir de variables del HBN, mediante validación cruzada estratificada de cinco particiones, utilizando el **coeficiente kappa cuadrático ponderado (QWK)** como métrica principal y **F1-macro** como métrica complementaria. Como meta académica **exploratoria**, se plantea alcanzar un QWK medio de al menos **0,35** y superar una línea base definida previamente.
 
-*La meta de QWK es un criterio de trabajo propuesto; no es un resultado obtenido ni un umbral de validez clínica. Deberá interpretarse frente a la distribución de clases y la línea base.*
+*Interpretaré la meta exploratoria de QWK frente a la distribución de clases y al desempeño de la línea base.*
 
 ### Objetivos específicos
 
@@ -65,8 +65,6 @@ Desarrollar y evaluar **antes de finalizar el periodo académico 2026-2** al men
 2. **Construir al menos dos configuraciones reproducibles de predictores** con selección razonada de características y transformaciones documentadas, excluyendo la etiqueta `sii`, `PCIAT-PCIAT_Total` y campos que permitan reconstruir directamente el desenlace; ajustar imputación, codificación y escalamiento solo en entrenamiento.
 3. **Entrenar y comparar al menos dos algoritmos supervisados** bajo el mismo esquema de validación estratificada de cinco particiones, documentando QWK, F1-macro, matriz de confusión y sensibilidad por categoría, especialmente para las clases minoritarias.
 4. **Seleccionar y discutir el modelo mejor sustentado** antes del cierre académico, contrastándolo con la línea base y presentando un informe de errores, limitaciones de representatividad, condiciones de reproducibilidad y necesidades de validación externa.
-
-Estos objetivos expresan resultados verificables. El análisis exploratorio y el preprocesamiento son medios para obtener productos concretos, no fines en sí mismos.
 
 ## 4. Antecedentes y estado del arte
 
@@ -78,7 +76,7 @@ Los trabajos de Ko y colaboradores [1], Yen y colaboradores [3] y van Rooij y co
 
 ### 4.2. Comparación de métodos y modelos en estudios previos
 
-La revisión reúne estudios de cribado, trabajos de clasificación binaria y dos soluciones de Kaggle que estimaron las cuatro categorías de `sii` en datos del HBN. Para cada trabajo se indica el método, el conjunto de evaluación, el resultado reportado y su pertinencia para el proyecto.
+Comparo estudios de cribado, trabajos de clasificación binaria y dos soluciones de Kaggle que estimaron las cuatro categorías de `sii` en el HBN. La tabla resume cómo se evaluó cada método y qué aporta al proyecto.
 
 | Fuente | Población y tarea | Método y evaluación | Resultado reportado | Aporte y limitación para el proyecto |
 |---|---|---|---|---|
@@ -88,7 +86,7 @@ La revisión reúne estudios de cribado, trabajos de clasificación binaria y do
 | Haupts (primer puesto de Kaggle) [15] | HBN. Estimación del puntaje total PCIAT como desenlace continuo y conversión a `sii`. | Ensamble por votación de LightGBM, dos modelos XGBoost, CatBoost y ExtraTrees. El notebook usa 10 particiones estratificadas por `sii` y calibra umbrales con los datos de entrenamiento de cada partición. | **QWK 0,469** del ensamble sobre las predicciones de validación de las 10 particiones, según la salida del [notebook](https://www.kaggle.com/code/lennarthaupts/1st-place-cmi-model-v4-1-1-reduced?scriptVersionId=213769368). | Ofrece un ejemplo de regresión seguida de clasificación ordinal. La imputación del notebook se ajusta antes de la validación cruzada. El puntaje corresponde a una evaluación interna del cuaderno. |
 | Agarwal (segundo puesto de Kaggle) [16] | HBN. Regresión multisalida con CatBoost y conversión de la predicción del total PCIAT a `sii`. | Imputación según el tipo de variable y 20 particiones estratificadas por `sii`. Ajusta los umbrales con el conjunto de predicciones de validación. | **QWK 0,409** en la ejecución guardada del [notebook](https://www.kaggle.com/code/aradhyeagarwal/starter-notebook-with-polars-gpu), configurada con una iteración por modelo al usar el archivo de prueba de ejemplo. El autor reportó **0,435** en el tablero público para ese notebook. | La imputación usa conjuntamente las variables de entrenamiento y prueba antes de dividir las particiones. Además, el QWK interno se calculó sobre las mismas predicciones usadas para ajustar los umbrales. |
 
-Las cifras de AUC, exactitud y QWK responden a tareas y métricas diferentes. Los QWK de 0,469 y 0,409 provienen de ejecuciones con protocolos distintos. Para los dos primeros puestos se verificó la posición final. Las cifras exactas de sus envíos en el tablero privado quedaron sin confirmar en los reportes y notebooks consultados.
+Las cifras de AUC, exactitud y QWK responden a tareas y métricas diferentes. Los reportes de Kaggle documentan la evaluación técnica de los modelos para la competencia. Los QWK de 0,469 y 0,409 provienen de ejecuciones con protocolos distintos. Los puestos corresponden a la clasificación final de la competencia. Los puntajes exactos del tablero privado quedaron sin confirmar en los reportes y cuadernos consultados.
 
 La revisión de Kato y colaboradores [4] aporta un marco general sobre modelos computacionales de adicciones conductuales. Probierz y colaboradores [9] exploran algoritmos predictivos en datos de ciencias sociales. Feng y colaboradores [13] emplearon conectividad cerebral, una modalidad diferente de los indicadores tabulares de este proyecto. Los tres trabajos aportan contexto conceptual o metodológico.
 
@@ -98,23 +96,23 @@ La revisión de Kato y colaboradores [4] aporta un marco general sobre modelos c
 
 En HBN se incluyen instrumentos demográficos, medidas corporales y de aptitud física, cuestionarios de sueño y actividad, categorías de uso de internet y actigrafía [10]. La disponibilidad y la oportunidad temporal de cada predictor deben comprobarse antes de incorporarlo. La asociación estadística entre una variable y `sii` no constituye por sí misma prueba causal ni criterio suficiente de selección.
 
-Los dos cuadros de síntesis elaborados originalmente se mantienen como antecedentes visuales; esta comparación narrativa es la que fundamenta explícitamente método, hallazgos y límites:
+Los siguientes cuadros resumen los modelos y las variables candidatas que consideré al formular el proyecto.
 
 ![Cuadro original sobre modelos de aprendizaje automático](https://github.com/user-attachments/assets/14ee8b59-786c-40f2-a32e-ddccce452dfa)
 
-*Figura 3. Cuadro original de modelos; interpretar junto con la tabla de comparación y las referencias corregidas.*
+*Figura 3. Resumen de modelos considerados en la formulación del proyecto.*
 
 ![Cuadro original sobre variables predictoras](https://github.com/user-attachments/assets/2d827a9b-4a02-41b5-836a-68fefbac785b)
 
-*Figura 4. Cuadro original de variables candidatas. Su pertinencia debe contrastarse con el diccionario y la calidad del HBN.*
+*Figura 4. Variables candidatas para contrastar con el diccionario y con la calidad de los datos del HBN.*
 
 ## 5. Enfoque metodológico y evaluación
 
-Se seguirá una adaptación de **CRISP-DM** para comprender el problema, auditar y preparar los datos, entrenar los modelos, evaluar su desempeño y comunicar los resultados. El proyecto utilizará el conjunto de datos del HBN publicado en la competencia del Child Mind Institute [10].
+Guiaré el proyecto con una adaptación de **CRISP-DM** para delimitar el problema, preparar los datos, evaluar los modelos y comunicar los resultados. Usaré los datos del HBN publicados en la competencia del Child Mind Institute [10].
 
 ### 5.1. Modelos propuestos
 
-Para estimar los cuatro niveles de severidad de `sii`, se propone comparar una línea base y dos clasificadores supervisados. La regresión logística y el bosque aleatorio tienen un antecedente en la clasificación binaria de uso problemático de internet [8]. El proyecto evaluará sus versiones multiclase en el HBN.
+Para estimar los cuatro niveles de severidad de `sii`, propongo comparar una línea base y dos clasificadores supervisados. La regresión logística y el bosque aleatorio tienen un antecedente en la clasificación binaria de uso problemático de internet [8]. Evaluaré sus versiones multiclase en el HBN.
 
 | Método | Papel en la comparación |
 |---|---|
@@ -124,7 +122,7 @@ Para estimar los cuatro niveles de severidad de `sii`, se propone comparar una l
 
 ### 5.2. Protocolo de evaluación
 
-Se utilizarán las mismas cinco particiones estratificadas para la línea base y los modelos. La imputación, la codificación y, cuando corresponda, el escalamiento y la selección de variables se ajustarán con los datos de entrenamiento de cada partición. Se excluirán de los predictores `sii`, `PCIAT-PCIAT_Total` y los ítems o campos que permitan reconstruir la etiqueta [10].
+Utilizaré las mismas cinco particiones estratificadas para la línea base y los modelos. La imputación, la codificación y, cuando corresponda, el escalamiento y la selección de variables se ajustarán con los datos de entrenamiento de cada partición. Se excluirán de los predictores `sii`, `PCIAT-PCIAT_Total` y los ítems o campos que permitan reconstruir la etiqueta [10].
 
 El **kappa cuadrático ponderado (QWK)** será la métrica principal porque penaliza más los errores entre niveles de severidad alejados. Se reportarán también F1-macro, la matriz de confusión y la sensibilidad por categoría, con atención a las clases minoritarias.
 
@@ -132,7 +130,7 @@ El **kappa cuadrático ponderado (QWK)** será la métrica principal porque pena
 
 ### 6.1. Tareas y entregables
 
-El plan de trabajo vincula las tareas con los objetivos específicos y con los productos de cada entrega.
+Organicé las tareas según los objetivos específicos y los productos de cada entrega.
 
 | Tarea | Actividades | Producto verificable |
 |---|---|---|
@@ -147,32 +145,15 @@ El plan de trabajo vincula las tareas con los objetivos específicos y con los p
 
 ### 6.2. Cronograma
 
-Las semanas se cuentan desde el inicio del plan de trabajo. Los hitos indican la semana prevista de cada entrega. La fecha y la hora de corte se registrarán según el calendario oficial de la asignatura.
+![Cronograma de seis semanas. Primera entrega al cierre de la semana 1, segunda al cierre de la semana 3 y tercera al cierre de la semana 6.](cronograma.png)
 
-| Semana prevista | Actividad principal | Hito previsto | Fecha y hora límite oficial |
-|---|---|---|---|
-| **1** | Formular el problema y los objetivos, revisar las fuentes y comparar soluciones previas. | **◆ Primera entrega.** Formulación y planificación. | Por confirmar |
-| **2** | Explorar y preparar los datos. Revisar la calidad, los faltantes y la disponibilidad de predictores. | Informe exploratorio y selección inicial de variables. | — |
-| **3** | Definir y ejecutar la línea base y los modelos. Comparar su desempeño. | **◆ Segunda entrega.** Análisis de datos y modelos de referencia. | Por confirmar |
-| **4 y 5** | Redactar la metodología, discutir los resultados y preparar las conclusiones. | Borrador del informe final. | — |
-| **6** | Consolidar el informe y grabar y editar el video. | **◆ Tercera entrega.** Informe final y video del proyecto. | Por confirmar |
-
-En un diagrama de Gantt, las barras sombreadas indican la duración de las actividades. Cada entrega es un **hito** y se marca con un rombo en la celda del día de vencimiento una vez confirmada la fecha. En la tabla, **◆** identifica la semana prevista del hito.
-
-<details>
-<summary>Consultar el cronograma gráfico original</summary>
-
-![Cronograma original del proyecto](https://github.com/user-attachments/assets/6a6011f0-8f81-46f3-92db-1961bae2c455)
-
-*Figura 6. Cronograma de la primera entrega. El fondo rosado identifica las filas de entrega. El gráfico presenta semanas relativas y deja sin marcar el día de vencimiento.*
-
-</details>
+*Figura 6. Cronograma del proyecto. Las barras indican la duración de las actividades. Cada rombo (◆) marca un hito previsto al cierre de su etapa. Las fechas y horas límite se confirmarán con el calendario oficial de la asignatura.*
 
 ## 7. Alcance, limitaciones y ética
 
 El conjunto HBN tiene datos faltantes y diferencias de cobertura entre instrumentos [10]. Los resultados internos de una muestra no demuestran desempeño en otras poblaciones. Tampoco se debe inferir causalidad, capacidad diagnóstica, riesgo clínico individual ni predicción futura sin evidencia temporal y validación externa.
 
-Este repositorio documenta el **proyecto académico de Viviana**; no incluye todavía resultados cuantitativos propios, notebooks ejecutables ni bases individuales. Cuando se publiquen resultados, deberán acompañarse de metodología, particiones, métricas y limitaciones verificables. Los datos originales se obtendrán desde Kaggle respetando sus condiciones de uso.
+Presentaré los resultados junto con la metodología, las particiones, las métricas y sus limitaciones cuando complete los experimentos. El acceso a los datos del HBN se realiza a través de Kaggle, de acuerdo con las condiciones de la competencia.
 
 ## 8. Cierre de la formulación
 
@@ -185,4 +166,4 @@ La propuesta delimita un problema de estimación ordinal sobre datos heterogéne
 - **[3]** Yen y colaboradores (2008). [DOI 10.1111/j.1440-1819.2007.01770.x](https://doi.org/10.1111/j.1440-1819.2007.01770.x).
 - **[4]** Kato y colaboradores (2023). [DOI 10.1016/j.addbeh.2022.107595](https://doi.org/10.1016/j.addbeh.2022.107595).
 
-[Bibliografía completa](../docs/referencias.md) · [Bitácora de correcciones](../docs/bitacora_bibliografica.md).
+[Bibliografía completa](../docs/referencias.md) · [Anexo. Bitácora de revisión bibliográfica](../docs/bitacora_bibliografica.md).

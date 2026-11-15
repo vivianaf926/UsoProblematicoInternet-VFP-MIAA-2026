@@ -1,8 +1,6 @@
-# Referencias bibliográficas — Proyecto PIU (Viviana Fernández Payán)
+# Referencias bibliográficas
 
 **Universidad Icesi · Maestría en Inteligencia Artificial Aplicada · 2026-2**
-
-Esta bibliografía conserva, en lo posible, los identificadores [1]–[14] de la primera entrega y añade tres fuentes primarias para el conjunto HBN y las soluciones de Kaggle. Los registros se cotejaron con PubMed, editoriales, repositorios universitarios y la competencia. Las referencias sustituidas se explican en [la bitácora de verificación](bitacora_bibliografica.md).
 
 ## Estudios clínicos, conceptuales y metodológicos
 
@@ -12,7 +10,7 @@ Esta bibliografía conserva, en lo posible, los identificadores [1]–[14] de la
 
 [3] J.-Y. Yen, C.-H. Ko, C.-F. Yen, S.-H. Chen, W.-L. Chung y C.-C. Chen, “Psychiatric symptoms in adolescents with Internet addiction: Comparison with substance use”, *Psychiatry and Clinical Neurosciences*, vol. 62, n.º 1, pp. 9–16, 2008. DOI: https://doi.org/10.1111/j.1440-1819.2007.01770.x.
 
-[4] A. Kato, K. Shimomura, D. Ognibene, M. A. Parvaz, L. A. Berner, K. Morita y V. G. Fiore, “Computational models of behavioral addictions: State of the art and future directions”, *Addictive Behaviors*, vol. 140, art. 107595, 2023. DOI: https://doi.org/10.1016/j.addbeh.2022.107595. **Reemplazo de una entrada previa no verificable; revisión amplia, no estudio sobre HBN.**
+[4] A. Kato, K. Shimomura, D. Ognibene, M. A. Parvaz, L. A. Berner, K. Morita y V. G. Fiore, “Computational models of behavioral addictions: State of the art and future directions”, *Addictive Behaviors*, vol. 140, art. 107595, 2023. DOI: https://doi.org/10.1016/j.addbeh.2022.107595.
 
 [5] P. Gómez Salgado, A. Rial Boubeta, T. Braña Tobío, J. Varela Mallou y C. Barreiro Couto, “Evaluation and early detection of problematic Internet use in adolescents”, *Psicothema*, vol. 26, n.º 1, pp. 21–26, 2014. DOI: https://doi.org/10.7334/psicothema2013.109.
 
@@ -41,9 +39,3 @@ Esta bibliografía conserva, en lo posible, los identificadores [1]–[14] de la
 [16] A. Agarwal, “2nd Place Writeup”, *Kaggle*, 2024. https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use/writeups/aradhye-agarwal-2nd-place-writeup.
 
 [17] Child Mind Institute, “Child Mind Institute and Kaggle Launch Competition to Predict Teen Internet Addiction”, comunicado del 19 de septiembre de 2024. https://childmind.org/blog/child-mind-institute-and-kaggle-launch-competition-to-predict-teen-internet-addiction/.
-
-## Criterios de lectura
-
-- Los artículos [1]–[9] y [11]–[14] utilizan distintas poblaciones, escalas y desenlaces; **no constituyen mediciones directamente comparables** sobre `sii`.
-- [15] y [16] son reportes técnicos de competidores y no equivalen a validación clínica externa ni artículos revisados por pares.
-- El desenlace `sii` deriva del instrumento PCIAT en los datos de [10]. Introducir el puntaje total PCIAT como **predictor directo de `sii`** produciría fuga de información.
