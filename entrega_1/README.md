@@ -17,33 +17,33 @@ El **Child Mind Institute**, mediante la competición *Child Mind Institute — 
 
 ## 2. Delimitación y formulación del problema
 
-La evaluación del uso problemático de internet presenta retos conceptuales y operativos: existen diferentes instrumentos y criterios de medición, manifestaciones heterogéneas y barreras para acceder a valoraciones especializadas [5], [11], [17]. Estas dificultades motivan el interés por estudiar indicadores complementarios, sin presuponer que sean equivalentes a una prueba diagnóstica.
+Para evaluar el uso problemático de internet en niños y adolescentes se requiere considerar cómo se mide el fenómeno y quién puede acceder a la valoración. Los instrumentos y los puntos de corte varían entre estudios [5], [11]. Algunos métodos requieren valoración profesional y pueden resultar difíciles de aplicar en familias con barreras culturales o lingüísticas [10], [17]. Estas dificultades motivan explorar indicadores complementarios de severidad.
 
 Desde el punto de vista de ciencia de datos, el reto se concreta en **determinar cuánto pueden aportar indicadores no derivados directamente del cuestionario PCIAT para estimar la categoría ordinal de severidad `sii`**, teniendo en cuenta valores faltantes, cobertura desigual de instrumentos, posibles desequilibrios entre clases y riesgo de fuga de información [10].
 
 ### 2.1. Árbol de problemas y sustento
 
-El árbol siguiente **organiza relaciones conceptuales plausibles** identificadas en los antecedentes. No representa un análisis causal probado experimentalmente:
+El árbol se centra en la dificultad para evaluar el uso problemático de internet de forma oportuna y consistente en niños y adolescentes. Las raíces recogen dificultades de medición y acceso descritas en las fuentes. Las ramas muestran sus posibles consecuencias para la detección, la orientación y la interpretación de las evaluaciones.
 
 ```mermaid
 flowchart BT
-    C1["Diversidad de instrumentos y criterios de medición [5, 11]"] --> P["Dificultad para evaluar oportunamente y de forma consistente el uso problemático de internet"]
-    C2["Barreras de acceso a evaluación especializada [17]"] --> P
-    C3["Manifestaciones psicológicas y conductuales heterogéneas [1, 3]"] --> P
-    C4["Diferencias en aplicaciones y contextos de uso [2, 12]"] --> P
-    P --> E1["Riesgo de necesidades de apoyo no reconocidas oportunamente"]
-    P --> E2["Menor comparabilidad de evaluaciones"]
-    P --> E3["Posible demora en orientación y seguimiento"]
-    P --> E4["Extrapolación inadecuada de indicadores inespecíficos"]
+    C1["Instrumentos con dimensiones y definiciones distintas [5, 11]"] --> P["Dificultad para evaluar de forma oportuna y consistente el uso problemático de internet en niños y adolescentes"]
+    C2["Puntos de corte que varían entre estudios [11]"] --> P
+    C3["Acceso limitado a valoración profesional [10, 17]"] --> P
+    C4["Barreras culturales y lingüísticas para las familias [10]"] --> P
+    P --> E1["Posible subdetección de necesidades de apoyo"]
+    P --> E2["Posibles demoras en la orientación a familias"]
+    P --> E3["Menor comparabilidad entre evaluaciones"]
+    P --> E4["Dificultad para estimar la magnitud del problema en distintas poblaciones"]
 ```
 
-*Figura 1. Síntesis conceptual de factores asociados a dificultades de evaluación y consecuencias potenciales. Los cuatro factores se apoyan en las fuentes citadas; las cuatro consecuencias se presentan como riesgos razonados, no como efectos causales cuantificados.*
+*Figura 1. Factores que pueden dificultar la evaluación y consecuencias potenciales. Las flechas representan relaciones conceptuales.*
 
-El árbol presentado en la primera entrega, que incluía cuatro causas y cuatro consecuencias relacionadas con el fenómeno, se conserva aquí como **material histórico**, sin asumir que sus flechas demuestran causalidad:
+Las diferencias en instrumentos y puntos de corte dificultan comparar resultados y estimar la magnitud del problema entre poblaciones [11]. Las barreras de acceso pueden reducir la probabilidad de que una necesidad de apoyo se reconozca o se atienda oportunamente [10], [17]. Los estudios sobre síntomas psicológicos y patrones de uso se discuten en los antecedentes [1], [2], [3], [12].
 
 ![Árbol de problemas original elaborado para la primera entrega](https://github.com/user-attachments/assets/44881d0e-d3c6-472a-8771-b5769ef8152e)
 
-*Figura 2. Árbol original de Viviana. Requiere distinguir factores asociados, antecedentes, posibles efectos y respaldo documental.*
+*Figura 2. Versión inicial del árbol de problemas presentada en la primera entrega.*
 
 ### 2.2. Pregunta de investigación
 
@@ -76,9 +76,9 @@ Gómez Salgado y colaboradores diseñaron y evaluaron un instrumento breve para 
 
 Los trabajos de Ko y colaboradores [1], Yen y colaboradores [3] y van Rooij y colaboradores [12] examinaron asociaciones con síntomas psiquiátricos y patrones de utilización de aplicaciones. Fisoun y colaboradores [7] describieron asociaciones con experiencia de consumo de sustancias en un estudio transversal; sus resultados no establecen causalidad. Ninguno de esos estudios evalúa directamente el mismo problema ordinal `sii` del conjunto HBN.
 
-### 4.2. Comparación de soluciones existentes
+### 4.2. Comparación de métodos y modelos en estudios previos
 
-Los estudios de cribado y clasificación binaria aportan antecedentes sobre la medición del uso problemático de internet. Las dos soluciones de Kaggle usan los datos del HBN y estiman las cuatro categorías de `sii`. La columna de resultados indica la métrica y el conjunto en que se calculó cada valor.
+La revisión reúne estudios de cribado, trabajos de clasificación binaria y dos soluciones de Kaggle que estimaron las cuatro categorías de `sii` en datos del HBN. Para cada trabajo se indica el método, el conjunto de evaluación, el resultado reportado y su pertinencia para el proyecto.
 
 | Fuente | Población y tarea | Método y evaluación | Resultado reportado | Aporte y limitación para el proyecto |
 |---|---|---|---|---|
@@ -110,37 +110,56 @@ Los dos cuadros de síntesis elaborados originalmente se mantienen como antecede
 
 ## 5. Enfoque metodológico y evaluación
 
-Se utilizará una adaptación de **CRISP-DM**: comprensión del problema, comprensión y preparación de los datos, modelado, evaluación y comunicación. La fuente prevista es el conjunto de la competencia Child Mind Institute — Problematic Internet Use [10].
+Se seguirá una adaptación de **CRISP-DM** para comprender el problema, auditar y preparar los datos, entrenar los modelos, evaluar su desempeño y comunicar los resultados. El proyecto utilizará el conjunto de datos del HBN publicado en la competencia del Child Mind Institute [10].
 
-| Etapa | Procedimiento propuesto | Evidencia esperada |
+### 5.1. Modelos propuestos
+
+Para estimar los cuatro niveles de severidad de `sii`, se propone comparar una línea base y dos clasificadores supervisados. La regresión logística y el bosque aleatorio tienen un antecedente en la clasificación binaria de uso problemático de internet [8]. El proyecto evaluará sus versiones multiclase en el HBN.
+
+| Método | Papel en la comparación |
+|---|---|
+| **Línea base de clase mayoritaria** | Asigna a cada registro la clase más frecuente del conjunto de entrenamiento de su partición. Permite observar el desempeño de una regla que solo usa la frecuencia de las clases. |
+| **Regresión logística multinomial regularizada** | Estima la probabilidad de cada nivel de severidad mediante un modelo lineal. |
+| **Bosque aleatorio** | Combina árboles de decisión para explorar relaciones no lineales e interacciones entre predictores. |
+
+### 5.2. Protocolo de evaluación
+
+Se utilizarán las mismas cinco particiones estratificadas para la línea base y los modelos. La imputación, la codificación y, cuando corresponda, el escalamiento y la selección de variables se ajustarán con los datos de entrenamiento de cada partición. Se excluirán de los predictores `sii`, `PCIAT-PCIAT_Total` y los ítems o campos que permitan reconstruir la etiqueta [10].
+
+El **kappa cuadrático ponderado (QWK)** será la métrica principal porque penaliza más los errores entre niveles de severidad alejados. Se reportarán también F1-macro, la matriz de confusión y la sensibilidad por categoría, con atención a las clases minoritarias.
+
+## 6. Plan de trabajo y cronograma
+
+### 6.1. Tareas y entregables
+
+El plan de trabajo vincula las tareas con los objetivos específicos y con los productos de cada entrega.
+
+| Tarea | Actividades | Producto verificable |
 |---|---|---|
-| Comprensión de datos | Diccionario, cobertura, faltantes, plausibilidad, distribución `sii`. | Informe EDA y matriz de variables. |
-| Preparación | Exclusión de predictores con fuga; imputación y codificación dentro de entrenamiento. | Flujo reproducible de transformación. |
-| Modelado | Línea base y al menos dos algoritmos supervisados bajo cinco particiones estratificadas. | Configuraciones y código documentado. |
-| Evaluación | QWK principal, F1-macro y matrices de confusión; sensibilidad por clase. | Tabla comparativa y análisis de errores. |
-| Discusión | Limitaciones de temporalidad, datos faltantes, desbalance, extrapolación y ética. | Informe final y recomendaciones metodológicas. |
-
-La etiqueta `sii` procede del puntaje `PCIAT-PCIAT_Total` [10]. **No es válido utilizar este puntaje como una variable de entrada para predecir `sii`**; ello reconstruiría la respuesta. En cambio, entrenar una regresión cuyo *desenlace* sea el puntaje total y luego transformar sus predicciones a categorías es una estrategia distinta, documentada por Haupts [15], que requiere su propia validación.
-
-El QWK considera que los niveles son ordenados; F1-macro y las matrices de confusión permitirán identificar diferencias entre clases. No se equipararán QWK, ROC-AUC, exactitud y errores de regresión sin explicar las tareas y escalas correspondientes.
-
-## 6. Planificación y materiales de la entrega original
-
-El proyecto contempla las actividades de revisión de antecedentes, comprensión de datos, preparación, entrenamiento, evaluación y documentación. Los diagramas originales de desglose de trabajo y cronograma se conservan como evidencia histórica de su planificación:
+| Formular el problema | Delimitar el alcance, construir el árbol de problemas, definir los objetivos y comparar los antecedentes. | Documento de formulación y bibliografía verificada. |
+| Auditar y preparar los datos | Revisar la disponibilidad de la etiqueta, el desbalance, los valores faltantes y la plausibilidad de los registros. Definir al menos dos conjuntos de predictores y documentar sus transformaciones. | Informe exploratorio, matriz de variables y código de preparación. |
+| Entrenar y evaluar los modelos | Ejecutar la línea base y los clasificadores con las mismas particiones. Comparar las métricas y revisar los errores por nivel de severidad. | Código de modelado, tabla de resultados y análisis de errores. |
+| Integrar y comunicar los resultados | Documentar el método, discutir limitaciones, elaborar las conclusiones y preparar el video del proyecto. | Informe final y video de presentación. |
 
 ![Estructura de desglose de trabajo original](https://github.com/user-attachments/assets/9eaa1ecd-0e70-421c-ad03-78adc1cefad8)
 
-*Figura 5. Estructura de desglose de trabajo (EDT) presentada originalmente.*
+*Figura 5. Estructura de desglose de trabajo (EDT) de la primera entrega.*
+
+### 6.2. Cronograma
+
+La planificación se organiza en seis semanas y tres entregas. La preparación de los datos precede al entrenamiento, y la evaluación de los modelos sirve de insumo para la discusión y las conclusiones.
+
+| Semana prevista | Actividad principal | Hito previsto |
+|---|---|---|
+| **1** | Formular el problema y los objetivos, revisar las fuentes y comparar soluciones previas. | **Primera entrega.** Formulación y planificación. |
+| **2** | Explorar y preparar los datos. Revisar la calidad, los faltantes y la disponibilidad de predictores. | Informe exploratorio y selección inicial de variables. |
+| **3** | Definir y ejecutar la línea base y los modelos. Comparar su desempeño. | **Segunda entrega.** Análisis de datos y modelos de referencia. |
+| **4 y 5** | Redactar la metodología, discutir los resultados y preparar las conclusiones. | Borrador del informe final. |
+| **6** | Consolidar el informe y grabar y editar el video. | **Tercera entrega.** Informe final y video del proyecto. |
 
 ![Cronograma original del proyecto](https://github.com/user-attachments/assets/6a6011f0-8f81-46f3-92db-1961bae2c455)
 
-*Figura 6. Cronograma original. Las fechas específicas deben contrastarse con los plazos de la asignatura.*
-
-| Periodo | Actividad | Producto |
-|---|---|---|
-| Primera etapa | Formulación y revisión bibliográfica | Presente documento y referencias verificadas. |
-| Segunda etapa | EDA, preparación y modelos de referencia | Informe, código y resultados **cuando se ejecuten**. |
-| Etapa final | Comparación, discusión y sustentación | Informe final y presentación académica. |
+*Figura 6. Cronograma original de la primera entrega. Las semanas se cuentan desde el inicio del plan de trabajo.*
 
 ## 7. Alcance, limitaciones y ética
 
