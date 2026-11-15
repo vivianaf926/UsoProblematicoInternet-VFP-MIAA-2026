@@ -147,19 +147,26 @@ El plan de trabajo vincula las tareas con los objetivos específicos y con los p
 
 ### 6.2. Cronograma
 
-La planificación se organiza en seis semanas y tres entregas. La preparación de los datos precede al entrenamiento, y la evaluación de los modelos sirve de insumo para la discusión y las conclusiones.
+Las semanas se cuentan desde el inicio del plan de trabajo. Los hitos indican la semana prevista de cada entrega. La fecha y la hora de corte se registrarán según el calendario oficial de la asignatura.
 
-| Semana prevista | Actividad principal | Hito previsto |
-|---|---|---|
-| **1** | Formular el problema y los objetivos, revisar las fuentes y comparar soluciones previas. | **Primera entrega.** Formulación y planificación. |
-| **2** | Explorar y preparar los datos. Revisar la calidad, los faltantes y la disponibilidad de predictores. | Informe exploratorio y selección inicial de variables. |
-| **3** | Definir y ejecutar la línea base y los modelos. Comparar su desempeño. | **Segunda entrega.** Análisis de datos y modelos de referencia. |
-| **4 y 5** | Redactar la metodología, discutir los resultados y preparar las conclusiones. | Borrador del informe final. |
-| **6** | Consolidar el informe y grabar y editar el video. | **Tercera entrega.** Informe final y video del proyecto. |
+| Semana prevista | Actividad principal | Hito previsto | Fecha y hora límite oficial |
+|---|---|---|---|
+| **1** | Formular el problema y los objetivos, revisar las fuentes y comparar soluciones previas. | **◆ Primera entrega.** Formulación y planificación. | Por confirmar |
+| **2** | Explorar y preparar los datos. Revisar la calidad, los faltantes y la disponibilidad de predictores. | Informe exploratorio y selección inicial de variables. | — |
+| **3** | Definir y ejecutar la línea base y los modelos. Comparar su desempeño. | **◆ Segunda entrega.** Análisis de datos y modelos de referencia. | Por confirmar |
+| **4 y 5** | Redactar la metodología, discutir los resultados y preparar las conclusiones. | Borrador del informe final. | — |
+| **6** | Consolidar el informe y grabar y editar el video. | **◆ Tercera entrega.** Informe final y video del proyecto. | Por confirmar |
+
+En un diagrama de Gantt, las barras sombreadas indican la duración de las actividades. Cada entrega es un **hito** y se marca con un rombo en la celda del día de vencimiento una vez confirmada la fecha. En la tabla, **◆** identifica la semana prevista del hito.
+
+<details>
+<summary>Consultar el cronograma gráfico original</summary>
 
 ![Cronograma original del proyecto](https://github.com/user-attachments/assets/6a6011f0-8f81-46f3-92db-1961bae2c455)
 
-*Figura 6. Cronograma original de la primera entrega. Las semanas se cuentan desde el inicio del plan de trabajo.*
+*Figura 6. Cronograma de la primera entrega. El fondo rosado identifica las filas de entrega. El gráfico presenta semanas relativas y deja sin marcar el día de vencimiento.*
+
+</details>
 
 ## 7. Alcance, limitaciones y ética
 
@@ -171,4 +178,11 @@ Este repositorio documenta el **proyecto académico de Viviana**; no incluye tod
 
 La propuesta delimita un problema de estimación ordinal sobre datos heterogéneos de niños y adolescentes. La revisión científica y los reportes técnicos de la competencia sustentan la pertinencia de explorar modelos, pero no autorizan a anticipar un rendimiento ni una utilidad clínica. El valor académico del proyecto dependerá de una comparación reproducible, control de fuga de información e interpretación crítica del error por categoría.
 
-**Fuentes:** [Bibliografía completa, con autoría y enlaces verificados](../docs/referencias.md) · [Bitácora de correcciones](../docs/bitacora_bibliografica.md).
+## Referencias
+
+- **[1]** Ko y colaboradores (2012). [DOI 10.1016/j.eurpsy.2010.04.011](https://doi.org/10.1016/j.eurpsy.2010.04.011).
+- **[2]** Kuss y colaboradores (2013). [DOI 10.1016/j.chb.2013.04.002](https://doi.org/10.1016/j.chb.2013.04.002).
+- **[3]** Yen y colaboradores (2008). [DOI 10.1111/j.1440-1819.2007.01770.x](https://doi.org/10.1111/j.1440-1819.2007.01770.x).
+- **[4]** Kato y colaboradores (2023). [DOI 10.1016/j.addbeh.2022.107595](https://doi.org/10.1016/j.addbeh.2022.107595).
+
+[Bibliografía completa](../docs/referencias.md) · [Bitácora de correcciones](../docs/bitacora_bibliografica.md).
