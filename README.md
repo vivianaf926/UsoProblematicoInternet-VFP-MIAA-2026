@@ -1,6 +1,6 @@
 # Uso problemático de internet en niños y adolescentes — Proyecto MIAA 2026-2
 
-**Universidad Icesi · Maestría en Inteligencia Artificial Aplicada**  
+**Universidad Icesi · Especialización en Inteligencia Artificial Aplicada**  
 **Asignatura:** Proyecto I de Innovación IA  
 **Autora:** [Viviana Fernández Payán](https://github.com/vivianaf926)  
 **Estado:** formulación, EDA tabular y experimentos de referencia documentados.
@@ -19,7 +19,7 @@ El propósito es **académico y exploratorio**. El análisis estima niveles de s
 |---|---|
 | [**Entrega 1: formulación del problema**](entrega_1/README.md) | Contexto, árbol de problemas, pregunta, objetivos SMART, comparación de antecedentes, metodología prevista y planificación. |
 | [**Referencias bibliográficas**](docs/referencias.md) | Fuentes científicas y técnicas con autores, datos editoriales y vínculos directos verificables. |
-| [**Anexo. Bitácora de revisión bibliográfica**](docs/bitacora_bibliografica.md) | Criterios de verificación y cambios entre versiones de la bibliografía. |
+| [**Anexo. Bitácora de revisión bibliográfica**](docs/bitacora_bibliografica.md) | Criterio de verificación y cambios entre versiones de la bibliografía. |
 | [**Entrega 2 — EDA y experimentos de referencia**](entrega_2/EDA_PIU_Viviana.ipynb) | Cohorte, calidad y selección de variables, hipótesis, modelos, comparaciones de predictores y errores por categoría. |
 
 ## Datos y fuente
@@ -38,7 +38,7 @@ Los experimentos utilizan el **coeficiente kappa cuadrático ponderado (QWK)** c
 
 Siguiendo una adaptación de **CRISP-DM**, delimité el problema, audité los datos tabulares y evalué los modelos de referencia. Excluí el bloque PCIAT de los predictores para controlar la fuga de información.
 
-La explicación detallada de la metodología y sus criterios está en la [primera entrega](entrega_1/README.md).
+La explicación detallada de la metodología y sus criterios está en la [primera entrega](entrega_1/README.md), la cual fue corregida.
 
 ## Estado de avances y reproducibilidad
 
@@ -46,7 +46,7 @@ El [notebook de la segunda entrega](entrega_2/EDA_PIU_Viviana.ipynb) incluye có
 
 ## Limitaciones y uso responsable
 
-Los resultados se interpretan teniendo en cuenta el desbalance de categorías, los valores faltantes, la oportunidad temporal de las mediciones y los posibles sesgos de selección. La validación interna no garantiza generalización clínica. Este trabajo no reemplaza la valoración de profesionales de salud mental ni permite recomendaciones individuales automatizadas.
+Los resultados se interpretan teniendo en cuenta el desbalance de categorías, los valores faltantes, la oportunidad temporal de las mediciones y los posibles sesgos de selección. La validación interna no garantiza generalización clínica. Cabe anotar que este trabajo no reemplaza la valoración de profesionales de salud mental ni permite recomendaciones individuales automatizadas.
 
 ---
 
