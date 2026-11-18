@@ -1,8 +1,8 @@
-# Bitácora de revisión bibliográfica
+# BITACORA DE REVISION BIBLIOGRAFICA
 
-En este anexo registro cómo verifiqué las fuentes de la primera entrega y qué cambios hice en mi bibliografía. El objetivo es que quien consulte el proyecto pueda localizar cada fuente y entender por qué la utilicé. La lista vigente está en [Referencias bibliográficas](referencias.md).
+En este anexo registro cómo verifiqué las fuentes de la primera entrega y qué cambios hice en mi bibliografía de acuerdo a las recomendaciones de mi docente. El objetivo es que quien consulte el proyecto pueda localizar cada fuente y entender por qué la utilicé. La lista vigente está en [Referencias bibliográficas](referencias.md).
 
-## Cambios de la primera entrega
+## CAMBIOS DE LA PRIMERA ENTREGA
 
 | Referencia | Aspecto revisado | Decisión |
 |---|---|---|
@@ -22,10 +22,8 @@ En este anexo registro cómo verifiqué las fuentes de la primera entrega y qué
 | [14] | Autoría, revista, año y páginas | Actualicé los datos del estudio de Ko y colaboradores en *Archives of Pediatrics & Adolescent Medicine* (2009). |
 | [15]–[17] | Fuentes técnicas y contexto de la competencia | Incorporé los reportes de los dos primeros puestos de Kaggle y el comunicado del Child Mind Institute. |
 
-## Criterios de verificación
+## CRITERIOS DE VERIFICACION
 
-1. Cotejo la autoría, el año, el título y el medio de publicación con la ficha editorial o institucional. Enlazo el DOI o la página oficial de la fuente.
+1. Confirmo quien es el autor, el año, el título y el medio de publicación con la ficha editorial o institucional. Enlazo el DOI o la página oficial de la fuente.
 2. Reviso que cada cita respalde la afirmación para la que la uso. Tomo en cuenta la población, el diseño, el desenlace y el alcance de los hallazgos.
 3. Para interpretar los resultados de los modelos, identifico la tarea, los datos, las métricas y el procedimiento de validación de cada estudio.
-
-El historial de Git permite consultar las versiones anteriores de la bibliografía.
