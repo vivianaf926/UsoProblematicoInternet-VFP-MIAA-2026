@@ -1,6 +1,6 @@
 # Entrega 1 — Formulación del proyecto y revisión de antecedentes
 
-**Universidad Icesi · Maestría en Inteligencia Artificial Aplicada · 2026-2**  
+**Universidad Icesi: Especialización en Inteligencia Artificial Aplicada · 2026-2**  
 **Proyecto:** Estimación de la severidad del uso problemático de internet en niños y adolescentes.  
 **Autora:** Viviana Fernández Payán · [GitHub: vivianaf926](https://github.com/vivianaf926)  
 **Estado:** formulación y revisión de antecedentes. La evaluación experimental corresponde a la siguiente etapa.
@@ -19,7 +19,7 @@ El **Child Mind Institute**, mediante la competición *Child Mind Institute — 
 
 Para evaluar el uso problemático de internet en niños y adolescentes se requiere considerar cómo se mide el fenómeno y quién puede acceder a la valoración. Los instrumentos y los puntos de corte varían entre estudios [5], [11]. Algunos métodos requieren valoración profesional y pueden resultar difíciles de aplicar en familias con barreras culturales o lingüísticas [10], [17]. Estas dificultades motivan explorar indicadores complementarios de severidad.
 
-Examinaré cuánto aportan **los indicadores que no se deriven del cuestionario PCIAT para estimar la categoría ordinal de severidad `sii`**. Tendré en cuenta los valores faltantes, la cobertura de los instrumentos, el desbalance entre clases y el riesgo de fuga de información [10].
+Procedo a inspeccionar cuánto aportan **los indicadores que no se deriven del cuestionario PCIAT para estimar la categoría ordinal de severidad `sii`**. Tendré en cuenta los valores faltantes, la cobertura de los instrumentos, el desbalance entre clases y el riesgo de fuga de información [10].
 
 ### 2.1. Árbol de problemas y sustento
 
@@ -76,7 +76,7 @@ Los trabajos de Ko y colaboradores [1], Yen y colaboradores [3] y van Rooij y co
 
 ### 4.2. Comparación de métodos y modelos en estudios previos
 
-Comparo estudios de cribado, trabajos de clasificación binaria y dos soluciones de Kaggle que estimaron las cuatro categorías de `sii` en el HBN. La tabla resume cómo se evaluó cada método y qué aporta al proyecto.
+Comparé estudios de cribado, trabajos de clasificación binaria y dos soluciones de Kaggle que estimaron las cuatro categorías de `sii` en el HBN. La tabla resume cómo se evaluó cada método y qué aporta al proyecto.
 
 | Fuente | Población y tarea | Método y evaluación | Resultado reportado | Aporte y limitación para el proyecto |
 |---|---|---|---|---|
@@ -88,9 +88,9 @@ Comparo estudios de cribado, trabajos de clasificación binaria y dos soluciones
 
 Las cifras de AUC, exactitud y QWK responden a tareas y métricas diferentes. Los reportes de Kaggle documentan la evaluación técnica de los modelos para la competencia. Los QWK de 0,469 y 0,409 provienen de ejecuciones con protocolos distintos. Los puestos corresponden a la clasificación final de la competencia. Los puntajes exactos del tablero privado quedaron sin confirmar en los reportes y cuadernos consultados.
 
-La revisión de Kato y colaboradores [4] aporta un marco general sobre modelos computacionales de adicciones conductuales. Probierz y colaboradores [9] exploran algoritmos predictivos en datos de ciencias sociales. Feng y colaboradores [13] emplearon conectividad cerebral, una modalidad diferente de los indicadores tabulares de este proyecto. Los tres trabajos aportan contexto conceptual o metodológico.
+La revisión de Kato y colaboradores [4] aporta un marco general sobre modelos computacionales de adicciones conductuales. Probierz y colaboradores [9] exploran algoritmos predictivos en datos de ciencias sociales. Feng y colaboradores [13] emplearon conectividad cerebral, una modalidad diferente de los indicadores tabulares de este proyecto. Los tres trabajos aportan contexto conceptual y metodológico.
 
-**Brecha del proyecto.** Se evaluará cuánto añade cada grupo de variables frente a una línea base bajo las mismas particiones y métricas. La selección de variables, la imputación y cualquier ajuste de umbrales se harán con datos de entrenamiento de cada partición. La evaluación reportará QWK, F1-macro y errores por nivel de `sii`, con atención a las clases minoritarias.
+**Brecha del proyecto** Se evaluará cuánto añade cada grupo de variables frente a una línea base bajo las mismas particiones y métricas. La selección de variables, la imputación y cualquier ajuste de umbrales se harán con datos de entrenamiento de cada partición. La evaluación reportará QWK, F1-macro y errores por nivel de `sii`, con atención a las clases minoritarias.
 
 ### 4.3. Relación con las variables candidatas
 
@@ -122,9 +122,9 @@ Para estimar los cuatro niveles de severidad de `sii`, propongo comparar una lí
 
 ### 5.2. Protocolo de evaluación
 
-Utilizaré las mismas cinco particiones estratificadas para la línea base y los modelos. La imputación, la codificación y, cuando corresponda, el escalamiento y la selección de variables se ajustarán con los datos de entrenamiento de cada partición. Se excluirán de los predictores `sii`, `PCIAT-PCIAT_Total` y los ítems o campos que permitan reconstruir la etiqueta [10].
+Utilizaré las mismas cinco particiones estratificadas para la línea base y los modelos. La imputación, la codificación y cuando corresponda, el escalamiento y la selección de variables se ajustarán con los datos de entrenamiento de cada partición. Se excluirán de los predictores `sii`, `PCIAT-PCIAT_Total` y los ítems o campos que permitan reconstruir la etiqueta [10].
 
-El **kappa cuadrático ponderado (QWK)** será la métrica principal porque penaliza más los errores entre niveles de severidad alejados. Se reportarán también F1-macro, la matriz de confusión y la sensibilidad por categoría, con atención a las clases minoritarias.
+**kappa cuadrático ponderado (QWK)** será la métrica principal porque penaliza más los errores entre niveles de severidad alejados. Se reportarán también F1-macro, la matriz de confusión y la sensibilidad por categoría, con atención a las clases minoritarias.
 
 ## 6. Plan de trabajo y cronograma
 
