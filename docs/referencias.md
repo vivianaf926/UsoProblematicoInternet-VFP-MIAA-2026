@@ -1,8 +1,8 @@
-# Referencias bibliográficas
+# REFERENCIAS BIBLIOGRAFICAS
 
-**Universidad Icesi · Maestría en Inteligencia Artificial Aplicada · 2026-2**
+**UNIVERSIDAD ICESI: Especialización en Inteligencia Artificial Aplicada · 2026-2**
 
-## Estudios clínicos, conceptuales y metodológicos
+## ESTUDIOS CLINICOS, CONCEPTUALES Y METODOLOGICOS
 
 [1] C.-H. Ko, J.-Y. Yen, C.-F. Yen, C.-S. Chen y C.-C. Chen, “The association between Internet addiction and psychiatric disorder: A review of the literature”, *European Psychiatry*, vol. 27, n.º 1, pp. 1–8, 2012. DOI: https://doi.org/10.1016/j.eurpsy.2010.04.011.
 
@@ -32,7 +32,7 @@
 
 [14] C.-H. Ko, J.-Y. Yen, C.-S. Chen, Y.-C. Yeh y C.-F. Yen, “Predictive values of psychiatric symptoms for Internet addiction in adolescents: A 2-year prospective study”, *Archives of Pediatrics & Adolescent Medicine*, vol. 163, n.º 10, pp. 937–943, 2009. DOI: https://doi.org/10.1001/archpediatrics.2009.159.
 
-## Documentación primaria y soluciones de la competencia
+## DOCUMENTACION PRIMARIA Y SOLUCIONES DE LA COMPETENCIA
 
 [15] L. Haupts, “First Place Write-Up: Or How I Won the Lottery”, *Kaggle*, 2 de enero de 2025. https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use/writeups/lennart-haupts-first-place-write-up-or-how-i-won-t.
 
